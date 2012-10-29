@@ -1,0 +1,296 @@
+body,#container, #header, header, #wrapper, section, article, #footer, footer{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	background-color: #FFFFFF;
+}
+
+#container{
+	width: 100%;
+	min-height: 600px;
+}
+
+#header{
+	width: 100%;
+	min-height: 120px;
+	background-color: #b87526;
+	background-image: url(../img/header1.jpg);
+	background-repeat: no-repeat;
+}
+
+#header #userdata{
+	-moz-border-radius: 10px 10px 30px 30px;
+	-o-border-radius: 10px 10px 30px 30px;
+	-webkit-border-radius: 10px 10px 30px 30px;
+	background-color: #b87526;
+	border-color: #9f5804;
+	border-radius: 10px 10px 30px 30px;
+	border-style: solid;
+	border-width: 3px;
+	margin-left: 80%;
+	margin-top: -12%;
+	min-height: 80px;
+	opacity: 0.5;
+	position: absolute;
+	width: 150px;
+	z-index: 1001;
+}
+
+#header #userdata ul li{
+	list-style: none;
+	margin-left: -15px;
+}
+
+#header #userdata ul li a{
+	text-decoration: none;
+	color: #fff;
+}
+
+#menuDiv{
+	display: block;
+	opacity: 0.7;
+	background-color: #fff;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+}
+
+#menuDiv ul li{
+	display: inline-block;
+	margin-left: 15px;
+}
+
+#menuDiv a{
+	text-decoration: none;
+	color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 28px;
+	border-bottom-width: 1px;
+	border-bottom-color: #fff;
+	border-bottom-style: dashed;
+
+}
+
+#menuDiv a:hover{
+	border-bottom-width: 1px;
+	border-bottom-color: #333;
+	border-bottom-style: dashed;
+}
+
+#menuDiv input{
+	font-size: 24px;
+	font-family: Arial;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-o-border-radius: 5px 5px 5px 5px;
+	box-shadow: 2px 2px 3px #AAA;
+	width: 250px;
+}
+
+#wrapper #s1 header{
+	color: #888;
+	font-size: 34px;
+}
+
+#wrapper #s1 h2{
+	font-size: 28px;
+	color: #b87526;
+}
+
+#wrapper #s1 p{
+	font-size: 22px;
+	color: #999;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#wrapper #s1 img{
+	float: left;
+	margin-right: 15px;
+}
+
+#wrapper #s2{
+	text-align: left;
+}
+
+#wrapper #s2 header{
+	display: block;
+	margin-left: 40%;
+	width: 500px;
+	color: #888;
+	font-size: 64px;
+}
+
+#wrapper #s2 #formulario{
+	display: block;
+	margin-top: 40px;
+	width: 800px;
+	margin-left: 30%;
+	color: #888;
+	font-size: 24px;
+}
+
+
+#wrapper #s3{
+	text-align: left;
+}
+
+#wrapper #s3 header{
+	display: block;
+	margin-left: 40%;
+	width: 500px;
+	color: #888;
+	font-size: 64px;
+}
+
+#wrapper #s3 #login{
+	display: block;
+	margin-top: 40px;
+	width: 800px;
+	margin-left: 30%;
+	color: #888;
+	font-size: 24px;
+}
+
+#wrapper #inicio{
+	width: 60%;
+	min-height: 600px;
+	background-color: #fff;
+	margin-left: 20%;
+}
+
+#wrapper #inicio header{
+	font-size: 28px;
+	color: #999;
+}
+
+#wrapper #inicio #opciones{
+	text-align: left;
+	float: left;
+	width: 20%;
+	min-height: 400px;
+	color: #CCC;
+}
+
+#wrapper #inicio #opciones ul li{
+	display: inline-block;
+}
+
+#wrapper #inicio #opciones a{
+	text-decoration: none;
+	color: #333;
+}
+
+#wrapper #inicio #opciones a:hover{
+	border-bottom-width: 1px;
+	border-bottom-color: #333;
+	border-bottom-style: dashed;
+}
+
+
+#wrapper #inicio #muro{
+	font-size: 20px;
+	border-color: #ccc;
+	border-style: solid;
+	border-width: 1px;
+	color: #CCC;
+	float: left;
+	min-height: 400px;
+	width: 70%;
+}
+
+#wrapper #inicio #muro header{
+	text-align: center;
+}
+
+#wrapper #inicio #muro #insertMuro{
+	text-align: center;
+}
+
+
+#wrapper #inicio #muro #insertMuro input{
+	font-size: 24px;
+	font-family: Arial;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	-o-border-radius: 5px 5px 5px 5px;
+	box-shadow: 2px 2px 3px #AAA;
+	width: 450px;
+}
+
+#wrapper #inicio #muro #post ul{
+	list-style: none;
+}
+
+#wrapper #inicio #muro #post ul li{
+	background-color: #CCC;
+	color: #777;
+	box-shadow: 2px 2px 3px #666;
+	-webkit-box-shadow: 2px 2px 3px #666;
+	-moz-box-shadow: 2px 2px 3px #666;
+}
+
+#wrapper #inicio #muro #post #user{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	color: #333;
+}
+
+#wrapper #inicio #muro #post #data{
+	display: block;
+	float: right;
+	font-size: 14px;
+	color: #fff;
+}
+
+#wrapper #inicio #muro #post #subPost{
+	margin-left: 10px;
+	font-family: "Agency FB";
+	font-size: 18px;
+}
+
+#wrapper #inicio #muro #post #categoria{
+	display: block;
+	background-color: #333;
+	color: #ccc;
+	font-size: 14px;
+}
+
+#wrapper #inicio #muro #listFriends li{
+	display: inline-block;
+	height: 50px;
+	color: #555;
+	width: auto;
+	border-color: #666;
+	border-width: 2px;
+	border-style: dotted;
+}
+
+
+#wrapper #inicio #perfilData{
+	text-align: right;
+	width: 500px;
+	margin-left: 80px;
+}
+
+#wrapper #inicio #perfilData input{
+	font-size: 20px;
+	color: #777;
+}
+
+#footer {
+	width: 100%;
+	min-height: 50px;
+	background-color: #b87526;
+	text-align: center;
+}
+
+#footer a{
+	color: #fff;
+	text-decoration: none;
+	margin: 10px;
+}
+

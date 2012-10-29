@@ -1,0 +1,17 @@
+ <?xml version="1.0"?> 
+<post>
+	<text>
+		Probando el texto con xml
+	</text>
+	<data>
+		2012-03-12
+		22:00:34
+	</data>
+</post>
+<post>
+	<imagen src="http://servidor/img.jpg">
+	<data>
+		2012-06-12
+		09:00:34
+	</data>
+</post>
