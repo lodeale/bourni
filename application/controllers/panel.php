@@ -32,9 +32,9 @@ class Panel extends CI_Controller {
         if($this->input->post('btoCodePasteBin')):
             $title = $this->input->post("msgMuro");
             $code = $this->input->post("code");
-            //$expire = $this->input->post("expire");
-            $links = $this->panel_model->pastebin($title,$code);
-            $msg = "Código compartido por pastebin.. <a href='$links'>..:ver:..</a>";
+            $expire = $this->input->post("expire");
+            $links = $this->panel_model->pastebin($title,$code,$expire);
+            $msg = "Código compartido por pastebin.. <a href='$links'>$links</a>";
 
         else:
             $msg = $this->input->post("msgMuro");

@@ -23,6 +23,12 @@
 
 			$("#pasteBinCode").toggle(function(){
 				$("#msgMuro").attr("placeholder","titulo");
+				$("#insertMuro form").append("<select name='expire'> ");
+				$("#insertMuro form select").append("<option value='N'>Nunca</option>");
+				$("#insertMuro form select").append("<option value='10M'>10 Min</option>");
+				$("#insertMuro form select").append("<option value='1H'>1 Hora</option>");
+				$("#insertMuro form select").append("<option value='1D'>1 Dia</option>");
+				$("#insertMuro form select").append("<option value='1M'>1 Mes</option>");
 				$("#insertMuro form").append("<textarea cols='70' rows='50' name='code'> ..::code::.. </textarea>")
 				$("#insertMuro form").append("<input type='submit' value='Enviar' name='btoCodePasteBin'>");
 			},function(){
