@@ -20,6 +20,7 @@ class Inicio extends CI_Controller {
         $this->load->view("inicio_view");
     }
 
+
     function acceder(){
  		$user = $this->input->post("usuario");
  		$pass = $this->input->post("clave");

@@ -90,6 +90,7 @@ body{
 	width: 250px;
 }
 
+
 #wrapper #s1 header{
 	color: #888;
 	font-size: 34px;
@@ -158,7 +159,7 @@ body{
 	width: 60%;
 	min-height: 600px;
 	background-color: #fff;
-	margin-left: 20%;
+	margin-left: 17%;
 }
 
 #wrapper #inicio header{
@@ -169,7 +170,7 @@ body{
 #wrapper #inicio #opciones{
 	text-align: left;
 	float: left;
-	width: 20%;
+	width: 25%;
 	min-height: 400px;
 	color: #CCC;
 }
@@ -189,6 +190,45 @@ body{
 	border-bottom-style: dashed;
 }
 
+#wrapper #sidebarRight{
+	display: block;
+	text-align: left;
+	position: absolute;
+	top: 190px;
+	left: 75%;
+	font-size: 14px;
+	border-color: #ccc;
+	border-style: solid;
+	border-width: 10px;
+	border-radius: 5px 5px 0px 0px;
+	width: 300px;
+	background-color: #333;
+	opacity: 0.6;
+	color: #FFF;
+}
+#wrapper #sidebarRight:hover{
+	opacity: 1.0;
+}
+
+#wrapper #sidebarRight ul li{
+	display: inline-block;
+	margin-left: -30px;
+	color: #ff6600;
+}
+
+#wrapper #sidebarRight a{
+	text-decoration: none;
+	color: #FFF;
+}
+
+#wrapper #sidebarRight a:hover{
+	color: #cc0000;
+}
+
+#wrapper #sidebarRight span{
+	color: #CCC;
+	font-size: 10px;
+}
 
 #wrapper #inicio #muro{
 	font-size: 20px;
@@ -274,6 +314,8 @@ body{
 	text-align: right;
 	width: 500px;
 	margin-left: 80px;
+	color: #333;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 #wrapper #inicio #perfilData input{

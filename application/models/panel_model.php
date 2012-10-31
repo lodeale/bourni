@@ -33,6 +33,19 @@ class Panel_model extends CI_Model {
 
 	}
 
+	public function getPostUpdate(){
+		$this->db->select("u.id_user,m.post,m.fecha,u.usuario");
+		$this->db->from("muro as m, usuarios as u");
+		$this->db->where("u.id_user = m.id_usuario");
+		$this->db->order_by("m.id_post","desc");
+		$this->db->limit("5");
+		$query = $this->db->get();
+		if($query->num_rows() > 0):
+			return $query->result();
+		else:
+			return false;
+		endif;
+	}
 
 	private function uniqueRelashion($idUser,$idFriends){
 		$this->db->where("id_user = ".$idUser);
@@ -148,7 +161,7 @@ class Panel_model extends CI_Model {
 	* Apis de PasteBin
 	*/
 	function pastebin($title,$code,$expire='10M',$perm='1'){
-		$api_dev_key 			= '5b1fe199f8fd7a86810632c541b59c01'; // your api_developer_key
+		$api_dev_key 			= '5b1fe199f8fd7d86810632c541b59c01'; // your api_developer_key
 		$api_paste_code 		= $code; // your paste text
 		$api_paste_private 		= $perm; // 0=public 1=unlisted 2=private
 		$api_paste_name			= $title; // name or title of your paste

@@ -19,6 +19,7 @@ class Panel extends CI_Controller {
     {
         $iduser = $this->session->userdata("id");
         $data["post"] = $this->panel_model->getPost($iduser);
+        $data["postUpdate"] = $this->panel_model->getPostUpdate();
         $this->load->view("muro_view",$data);
     }
 

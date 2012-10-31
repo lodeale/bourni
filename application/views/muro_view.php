@@ -9,7 +9,6 @@
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-ui.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			
 			$("#btoUserData").toggle(function(){
 				$("#userdata").animate({
 				    opacity: 1,
@@ -147,6 +146,18 @@
 							</ul>
 						</div>
 						< / div >
+				</section>
+				
+			</div>
+			<div id="sidebarRight">
+				<section id="postUpdate">
+					Ultimos post:
+					<ul>
+					<?php foreach($postUpdate as $row): ?>
+						<li><?php echo "<a href='".base_url()."panel/perfilFriends/".$row->usuario."'>".$row->usuario."</a>: ".substr($row->post,0,25)."...&nbsp;<span>".$row->fecha."</span>"; ?></li>
+						<hr>
+					<?php endforeach; ?>
+					</ul>
 				</section>
 			</div>
 		</div>
