@@ -3,10 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Bourni</title>
-	<link rel="stylesheet" href="<?php base_url(); ?>assets/css/estilo.css">
-	<link rel="stylesheet" type="text/css" href="<?php base_url(); ?>assets/css/ui-lightness/jquery-ui.css">
-	<script type="text/javascript" src="<?php base_url(); ?>assets/js/jquery.min.js"></script>
-	<script type="text/javascript" src="<?php base_url(); ?>assets/js/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/ui-lightness/jquery-ui.css">
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery-ui.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("#wrapper").tabs();
@@ -30,6 +30,9 @@
 			</ul>
 
 			<section id="s1">
+				<div class="error">
+				<?php echo validation_errors(); ?>
+				</div>
 				<header>< article id= Introducción ></header>
 				<article>
 					<h2> < h2 >¿Para quien es esta red Social? < / h2 ></h2>

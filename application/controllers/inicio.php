@@ -5,6 +5,7 @@ class Inicio extends CI_Controller {
 		parent::__construct();
 		$this->_isLogin();
 		$this->load->helper("form");
+        $this->load->library("form_validation");
 		$this->load->model("inicio_model");
 	}
 
@@ -48,10 +49,18 @@ class Inicio extends CI_Controller {
 	}
 
 	public function registrar(){
-        if($this->inicio_model->registrar($this->input->post())):
-            redirect("panel");
+        $this->form_validation->set_rules('n_p', 'nombre y apellido', 'trim|required|xss_clean');
+        $this->form_validation->set_rules('user', 'Usuario', 'trim|required|is_unique[usuarios.usuario]|xss_clean');
+        $this->form_validation->set_rules('password', 'Contraseña', 'trim|required|min_length[6]|max_length[20]|matches[reclave]|xss_clean');
+        $this->form_validation->set_rules('email', 'Correo', 'trim|required|valid_email|xss_clean');
+        if($this->form_validation->run() == FALSE):
+            $this->load->view("inicio_view");
         else:
-            redirect("panel");
+            if($this->inicio_model->registrar($this->input->post())):
+                redirect("panel");
+            else:
+                redirect("panel");
+            endif;
         endif;
     }
 }
