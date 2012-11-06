@@ -124,8 +124,7 @@
 						< div id = post >
 						<div id="post">
 							<ul id="postU">
-							<?php foreach($post as $friends): ?>
-								<?php foreach($friends as $row): ?>
+							<?php foreach($post as $row): ?>
 								<li>
 									<div id="user">
 										<?php echo $row->usuario; ?> 
@@ -144,7 +143,6 @@
 									</div>
 									<hr>
 								</li>
-								<?php endforeach; ?>
 							<?php endforeach; ?>
 							</ul>
 						</div>

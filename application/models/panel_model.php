@@ -21,16 +21,21 @@ class Panel_model extends CI_Model {
 	}
 
 	public function getInicio($iduser){
-		$postFriends = array();
-		$query = $this->db->get_where("relaciones",array("id_user"=>$iduser));
-		$relashionFriends = $query->result();
-
-		foreach($relashionFriends as $row):
-			$postFriends[] = $this->getPost($row->id_friends);
-		endforeach;
 		
-		return $postFriends;
-
+		//select muro.post, muro.fecha, muro.hora, categoria.categoria, usuarios.usuario  from categoria, usuarios, muro inner join relaciones on relaciones.id_friends = muro.id_usuario where relaciones.id_user = 1 and categoria.id_categoria = muro.id_categoria and muro.id_usuario = usuarios.id_user
+		$this->db->select("muro.post, muro.fecha, muro.hora, categoria.categoria, usuarios.usuario");
+    	$this->db->from("categoria, usuarios, muro");
+    	$this->db->join("relaciones","relaciones.id_friends = muro.id_usuario","inner");
+    	$this->db->where("relaciones.id_user = $iduser");
+    	$this->db->where("categoria.id_categoria = muro.id_categoria");
+    	$this->db->where("muro.id_usuario = usuarios.id_user");
+    	$this->db->order_by("muro.id_post", "desc");
+    	$query = $this->db->get();
+		if($query):
+			return $query->result();
+		else:
+			return false;
+		endif;	
 	}
 
 	public function getPostUpdate(){
